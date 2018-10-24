@@ -15,7 +15,8 @@ EXPOSE 80
 
 ENV DATABASE_IP 192.167.2.9
 
-RUN usermod -aG root slaya
+RUN usermod -aG sudo slaya
 USER slaya
+VOLUME [ "/my-data" ]
 
 #ENTRYPOINT [ "nginx","-g daemon off;" ]
